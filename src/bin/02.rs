@@ -33,7 +33,7 @@ pub fn part_one(input: &str) -> Option<u32> {
 pub fn part_two(input: &str) -> Option<u32> {
     let mut total = 0u32;
     let mut test_value = HashMap::new();
-    for (game_id, games) in input.split("\n").enumerate() {
+    for (_game_id, games) in input.split("\n").enumerate() {
         let (_name, cube_sets) = games.split_once(":").unwrap_or(("", ""));
         test_value.insert("red", 0);
         test_value.insert("green", 0);
